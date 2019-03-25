@@ -1,11 +1,81 @@
+:root {
+    --dark-grey: #3D3D3D;
+    --light-grey: #E3E3E3;
+    --dark-purple: #4B5DC1;
+    --white: #FFFFFF;
+}
+
+html {
+    color: var(--dark-grey);
+    background-color: var(--light-grey);
+    font-family: 'Open Sans', sans-serif;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color:var(--dark-purple);
+}
+
+.content {
+    margin: auto;
+    width: 60em;
+}
+
 header {
     height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1 {
+    display: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    width:20em;
+    justify-content: space-between;
 }
 
 .logo {
     height: 60px;
 }
 
-.model3d-space{
-    
+.cartIcon {
+    height: 1em;;
+
+}
+
+.product-info {
+    padding:1em;
+    display: flex;
+    flex-direction: row;
+}
+
+.cartBtn {
+    width: 15em;
+    margin-top:3em;
+    padding:5px;
+    color: var(--white);
+    background-color: var(--dark-purple);
+    border: var(--dark-purple) 2px solid;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.model3d-space {
+    width: 50%;
+    height: 400px;
+    padding:1em;
+}
+
+main {
+    width: 50%;
+}
+
+footer {
+    font-size: .6em;
+    text-align: center;
 }
