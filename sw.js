@@ -1,20 +1,16 @@
 // Perform install steps
 var CACHE_NAME = 'bestchair-v1';
 var urlsToCache = [
-    'images/cart.svg',
     'images/storeLogo.png',
-    'images/storelogo.svg',
     'images/ico512.png',
     'images/ico192.png',
     'models/bestchair.glb',
     'models/bluechair.glb',
     'models/whitechair.glb',
-    'i/iconInstantShare.svg',
     'scripts/model3d.js',
     'scripts/aframe.min.js',
     'styles/beststore.css',
-    'aframe.html',
-    'babylon.html'
+    'aframe.html'
 ];
 
 self.addEventListener('install', function(event) {
