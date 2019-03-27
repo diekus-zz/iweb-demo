@@ -1,0 +1,22 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "name": "Codefest X Samsung demo",
+  "description": "Store demo from Samsung Internet",
+  "short_name": "Best Chair",
+  "icons": [ {
+    "src": "images/ico192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  },
+  {
+    "src": "images/ico512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "start_url": "aframe.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#4D5CC1",
+  "background_color": "#E3E3E3"
+}

@@ -19,6 +19,7 @@ class Model3d extends HTMLElement{
 
             let createScene = function () {
                 var scene = new BABYLON.Scene(engine);
+                const vrHelpter =scene.createDefaultVRExperience();
                 scene.clearColor = new BABYLON.Color3(1, 1, 1);
                 scene.createDefaultCameraOrLight(true, true, true);
                 return scene;
