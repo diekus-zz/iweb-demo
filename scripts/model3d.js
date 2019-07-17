@@ -18,10 +18,18 @@ class Model3d extends HTMLElement{
             const engine = new BABYLON.Engine(cnv, true);
 
             let createScene = function () {
-                var scene = new BABYLON.Scene(engine);
-                const vrHelpter =scene.createDefaultVRExperience();
+                let scene = new BABYLON.Scene(engine);
+                //const vrHelpter =scene.createDefaultVRExperience();
                 scene.clearColor = new BABYLON.Color3(1, 1, 1);
-                scene.createDefaultCameraOrLight(true, true, true);
+                let hlight = new BABYLON.HemisphericLight("HemiLight", new BABYLON.Vector3(0, 1, 0), scene);
+
+                let camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 10, new BABYLON.Vector3(0, 0, 0), scene);camera.setTarget(BABYLON.Vector3.Zero());
+                camera.setPosition(new BABYLON.Vector3(0, 0, 1))
+                camera.minZ = 0.01;
+                camera.attachControl(cnv, true);
+                let vrHelper = scene.createDefaultVRExperience({createDeviceOrientationCamera:false});
+
+
                 return scene;
             }
 
@@ -73,7 +81,7 @@ class Model3d extends HTMLElement{
             var assetsManager = new BABYLON.AssetsManager(scene);
             const meshTask = assetsManager.addMeshTask('glb task', '', path[0], path[1]);
             meshTask.onSuccess = function (task){
-                task.loadedMeshes[0].position = BABYLON.Vector3.Zero();
+                task.loadedMeshes[0].position = new BABYLON.Vector3(0, 0, 0);
             }
             meshTask.onError = function(task, message, exception){
                 console.log(message, exception);
